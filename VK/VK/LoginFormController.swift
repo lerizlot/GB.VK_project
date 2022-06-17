@@ -53,20 +53,57 @@ class LoginFormController: UIViewController {
         
     }
     
-    @IBAction func tapButtonLogin(_ sender: Any) {
-        // Получаем текст логина
-        let login = loginTextField.text!
-        // Получаем текст-пароль
-        let password = passwordTextField.text!
+    // Переход на следующий экран будет выполнен при правильно введенных данных
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Проверяем данные
+        let checkResult = checkUserData()
         
-        // Проверяем, верны ли они
-        if login == "" && password == "" {
-            print("Authorization successfull, Welcome!")
-        } else {
-            print("Wrong email or password")
+        // Если данные не верны, покажем ошибку
+        if !checkResult {
+            showLoginError()
         }
         
-       // performSegue(withIdentifier: "", sender: nil)
+        // Вернем результат
+        return checkResult
+    }
+    
+    // Проверка введенных данных
+    func checkUserData() -> Bool {
+        guard let login = loginTextField.text,
+              let password = passwordTextField.text else { return false }
+        if login == "" && password == "" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    // При ошибке появится всплывающее окно сообщающее об этом
+    func showLoginError() {
+        // Создаем контроллер
+        let alert = UIAlertController(title: "Error", message: "Wrong login or password", preferredStyle: .alert)
+        // Создаем кнопку UIAlertController
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        // Добавляем кнопку UIAlertController
+        alert.addAction(action)
+        // Показываем UIAlertController
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func tapButtonLogin(_ sender: Any) {
+//        // Получаем текст логина
+//        let login = loginTextField.text!
+//        // Получаем текст-пароль
+//        let password = passwordTextField.text!
+//
+//        // Проверяем, верны ли они
+//        if login == "" && password == "" {
+//            print("Authorization successfull, Welcome!")
+//        } else {
+//            print("Wrong email or password")
+//        }
+//
+        // performSegue(withIdentifier: "", sender: nil)
     }
     
     // MARK: Keyboard
