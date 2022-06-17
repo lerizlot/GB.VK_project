@@ -10,6 +10,7 @@ import UIKit
 class LoginFormController: UIViewController {
     
     // MARK: Outlets
+    
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var logoImage: UIImageView!
     
@@ -91,4 +92,8 @@ class LoginFormController: UIViewController {
     @objc func hideKeyboard() {
         self.loginScrollView?.endEditing(true)
     }
+    
+    // MARK: UnwindSegue
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
 }

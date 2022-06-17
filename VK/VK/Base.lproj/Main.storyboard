@@ -12,7 +12,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginFormController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="BYZ-38-t0r" customClass="LoginFormController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,15 +42,15 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail or phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-rV-2Xa">
                                         <rect key="frame" x="122" y="361.5" width="170" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="170" id="bhq-0A-SqY"/>
+                                            <constraint firstAttribute="width" priority="999" constant="170" id="bhq-0A-SqY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y3V-vH-TnJ">
-                                        <rect key="frame" x="127" y="463" width="160" height="34"/>
+                                        <rect key="frame" x="122" y="463" width="170" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="999" constant="170" id="aXg-Ee-VnZ"/>
+                                            <constraint firstAttribute="width" priority="999" constant="170" id="aXg-Ee-VnZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
@@ -180,10 +180,15 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Photos" id="0Or-WQ-UVg">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="lock.fill" catalog="system" id="gZW-qP-84X"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="lock.fill" catalog="system" id="gZW-qP-84X">
+                            <connections>
+                                <segue destination="tSn-ps-gLr" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="roU-HK-hC7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0f-K8-If6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tSn-ps-gLr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6813" y="-204"/>
         </scene>
@@ -246,10 +251,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All Groups" id="cI1-44-LQx">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="lock.fill" catalog="system" id="HOC-fT-KrA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="lock.fill" catalog="system" id="HOC-fT-KrA">
+                            <connections>
+                                <segue destination="awx-Pt-DG7" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="A1U-zN-ty3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YU-4E-axh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="awx-Pt-DG7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6814" y="583"/>
         </scene>
