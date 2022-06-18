@@ -142,9 +142,7 @@
                             <outlet property="delegate" destination="AKH-2w-Mog" id="Ck2-XD-5QW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Friends" id="3ln-JU-gUM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="UtE-dy-70g"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="My Friends" id="3ln-JU-gUM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAJ-vF-fFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
