@@ -9,7 +9,7 @@ import UIKit
 
 class LoginFormController: UIViewController {
     
-    // MARK: Outlets
+    // MARK: - Outlets
     
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var logoImage: UIImageView!
@@ -18,7 +18,7 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    // MARK: Life cycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +52,7 @@ class LoginFormController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
+    // MARK: - Segue
     
     // Переход на следующий экран будет выполнен при правильно введенных данных
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -91,22 +92,22 @@ class LoginFormController: UIViewController {
     }
     
     @IBAction func tapButtonLogin(_ sender: Any) {
-//        // Получаем текст логина
-//        let login = loginTextField.text!
-//        // Получаем текст-пароль
-//        let password = passwordTextField.text!
-//
-//        // Проверяем, верны ли они
-//        if login == "" && password == "" {
-//            print("Authorization successfull, Welcome!")
-//        } else {
-//            print("Wrong email or password")
-//        }
-//
+        //        // Получаем текст логина
+        //        let login = loginTextField.text!
+        //        // Получаем текст-пароль
+        //        let password = passwordTextField.text!
+        //
+        //        // Проверяем, верны ли они
+        //        if login == "" && password == "" {
+        //            print("Authorization successfull, Welcome!")
+        //        } else {
+        //            print("Wrong email or password")
+        //        }
+        //
         // performSegue(withIdentifier: "", sender: nil)
     }
     
-    // MARK: Keyboard
+    // MARK: - Keyboard
     
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
@@ -130,7 +131,7 @@ class LoginFormController: UIViewController {
         self.loginScrollView?.endEditing(true)
     }
     
-    // MARK: UnwindSegue
+    // MARK: - UnwindSegue
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
 }
