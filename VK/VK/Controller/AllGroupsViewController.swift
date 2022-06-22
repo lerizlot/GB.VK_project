@@ -12,12 +12,14 @@ class AllGroupsViewController: UIViewController {
     // MARK: - Database
     
     let groups = [
-        Group(name: "Investigation Discovery", image: UIImage(named: "investigationDiscovery")),
-        Group(name: "Military History", image: UIImage(named: "militaryHistory")),
         Group(name: "Nat Geo Wild", image: UIImage(named: "natGeoWild")),
         Group(name: "Science", image: UIImage(named: "science")),
         Group(name: "National Geographic", image: UIImage(named: "nationalGeographic")),
-        Group(name: "Group Name", image: UIImage(systemName: "text.below.photo.fill")),
+        Group(name: "Animal Planet", image: UIImage(named: "animalPlanet")),
+        Group(name: "Discovery Knowledge", image: UIImage(named: "discoveryKnowledge")),
+        Group(name: "Discovery Science", image: UIImage(named: "discoveryScience")),
+        Group(name: "Investigation Discovery", image: UIImage(named: "investigationDiscovery")),
+        Group(name: "Military History", image: UIImage(named: "militaryHistory")),
     ]
     
     // MARK: - Outlets

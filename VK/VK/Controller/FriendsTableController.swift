@@ -20,8 +20,6 @@ class FriendsTableController: UITableViewController {
         User(name: "Woman 3", image: UIImage(named: "woman3")),
         User(name: "Man 4", image: UIImage(named: "man4")),
         User(name: "Man 5", image: UIImage(named: "man5")),
-        User(name: "Name Surname", image: UIImage(systemName: "person.circle")),
-        User(name: "Name Surname", image: UIImage(systemName: "person.circle")),
     ]
     
     // MARK: - Life cycle
