@@ -10,14 +10,14 @@ import UIKit
 class PhotoViewController: UIViewController {
     
     let photoAlbum = [
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
-        UIImage(systemName: "logo"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
+        UIImage(systemName: "person.fill"),
     ]
     
     // MARK: - Outlets
