@@ -12,10 +12,12 @@ class User {
     
     let name: String
     let image: UIImage?
+    let album: [UIImage]
     
-    init(name: String, image: UIImage? = nil) {
+    init(name: String, image: UIImage? = nil, album: [UIImage]) {
         self.name = name
         self.image = image
+        self.album = album
         
     }
     

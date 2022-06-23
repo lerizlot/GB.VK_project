@@ -15,6 +15,8 @@ class MyGroupsTableController: UITableViewController {
         Group(name: "Animal Planet", image: UIImage(named: "animalPlanet")),
         Group(name: "Discovery Knowledge", image: UIImage(named: "discoveryKnowledge")),
         Group(name: "Discovery Science", image: UIImage(named: "discoveryScience")),
+        Group(name: "Investigation Discovery", image: UIImage(named: "investigationDiscovery")),
+        Group(name: "Military History", image: UIImage(named: "militaryHistory")),
     ]
     
     // MARK: - Life cycle

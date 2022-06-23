@@ -9,12 +9,15 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
+    let photoAlbum = friends
+    
     // MARK: - Outlets
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
             collectionView.delegate = self
+
         }
     }
     
@@ -48,13 +51,15 @@ extension PhotoViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        photoAlbum.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-        
-        cell.friendPhoto.image = UIImage(named: "animalPlanet")
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCell else {
+            
+            preconditionFailure("Error")
+        }
+        cell.friendPhoto.image = photoAlbum[indexPath.row].image
         
         return cell
     }
