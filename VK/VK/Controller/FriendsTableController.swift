@@ -93,6 +93,7 @@ class FriendsTableController: UITableViewController {
         if segue.identifier == "showPhoto",
            let destinationVC = segue.destination as? PhotoViewController,
            let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.photoAlbum = friends[indexPath.row].album
             let friendName = friends[indexPath.row].name
             
             destinationVC.title = friendName

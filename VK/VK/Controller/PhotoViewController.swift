@@ -9,7 +9,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    let photoAlbum = friends
+    var photoAlbum: [UIImage] = []
     
     // MARK: - Outlets
     
@@ -59,7 +59,7 @@ extension PhotoViewController: UICollectionViewDataSource {
             
             preconditionFailure("Error")
         }
-        cell.friendPhoto.image = photoAlbum[indexPath.row].image
+        cell.friendPhoto.image = photoAlbum[indexPath.row]
         
         return cell
     }
