@@ -20,6 +20,12 @@ class GroupCell: UITableViewCell {
         // Initialization code
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        groupImage.layer.cornerRadius = groupImage.frame.size.width / 2
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
