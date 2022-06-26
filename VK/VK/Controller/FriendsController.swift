@@ -8,7 +8,8 @@
 import UIKit
 
 class FriendsController: UIViewController {
-    
+
+    let sectionArray = ["A","B","C","D", "E", "F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView! {
@@ -17,23 +18,42 @@ class FriendsController: UIViewController {
             tableView.delegate = self
         }
     }
-
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
+//}
+//
+//func setupGesture() {
+//
+//    let swipe = UISwipeGestureRecognizer(target: self, action: #selector(swiped))
+//    swipe.direction = .down
+//    addGestureRecognizer(swipe)
+//
+//}
+//
+//@objc private func swiped(_ swipeGesture: UISwipeGestureRecognizer) {
+//    print("Swiped")
 }
+
+
 // MARK: - Table view data source extension
 
 extension FriendsController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //        return
+    //    }
+    
+    //    func numberOfSections(in tableView: UITableView) -> Int {
+    //        return sectionArray.count
+    //    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return friends.count
@@ -51,12 +71,13 @@ extension FriendsController: UITableViewDataSource {
         
         return cell
     }
-    
-    
-    
 }
 
 extension FriendsController: UITableViewDelegate {
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return sectionArray
+    }
     
     // MARK: - Segue
     
