@@ -15,13 +15,14 @@
 		5703F6A2285B233B005D32F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5703F6A0285B233B005D32F8 /* LaunchScreen.storyboard */; };
 		5756A10628661E610034FD74 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756A10528661E610034FD74 /* ShadowView.swift */; };
 		5756A10928688A610034FD74 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756A10828688A610034FD74 /* LikeControl.swift */; };
+		57972E012868A50D00884180 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E002868A50D00884180 /* FriendsController.swift */; };
+		57972E052868A8C700884180 /* AlphabetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E042868A8C700884180 /* AlphabetControl.swift */; };
 		579A8C20285BAA9F0059E0F4 /* LoginFormController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579A8C1F285BAA9F0059E0F4 /* LoginFormController+extension.swift */; };
 		57A370C8285B7569004E9C4D /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A370C7285B7569004E9C4D /* LoginFormController.swift */; };
 		57DBC7E82860E4BA0017E1E8 /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7E72860E4BA0017E1E8 /* AllGroupsViewController.swift */; };
 		57DBC7EA2860E4D50017E1E8 /* MyGroupsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7E92860E4D50017E1E8 /* MyGroupsTableController.swift */; };
 		57DBC7ED2860E6210017E1E8 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7EC2860E6210017E1E8 /* GroupCell.swift */; };
 		57DBC7EF2860E8750017E1E8 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7EE2860E8750017E1E8 /* Group.swift */; };
-		57DBC7F42860F2080017E1E8 /* FriendsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7F32860F2080017E1E8 /* FriendsTableController.swift */; };
 		57DBC7F82860F2680017E1E8 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7F72860F2680017E1E8 /* PhotoCell.swift */; };
 		57DBC7FA2860F2850017E1E8 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7F92860F2850017E1E8 /* FriendCell.swift */; };
 		57DBC8022860F74D0017E1E8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC8012860F74D0017E1E8 /* User.swift */; };
@@ -39,13 +40,14 @@
 		5703F6A3285B233B005D32F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5756A10528661E610034FD74 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		5756A10828688A610034FD74 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		57972E002868A50D00884180 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		57972E042868A8C700884180 /* AlphabetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetControl.swift; sourceTree = "<group>"; };
 		579A8C1F285BAA9F0059E0F4 /* LoginFormController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginFormController+extension.swift"; sourceTree = "<group>"; };
 		57A370C7285B7569004E9C4D /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		57DBC7E72860E4BA0017E1E8 /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
 		57DBC7E92860E4D50017E1E8 /* MyGroupsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableController.swift; sourceTree = "<group>"; };
 		57DBC7EC2860E6210017E1E8 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		57DBC7EE2860E8750017E1E8 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		57DBC7F32860F2080017E1E8 /* FriendsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableController.swift; sourceTree = "<group>"; };
 		57DBC7F72860F2680017E1E8 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		57DBC7F92860F2850017E1E8 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		57DBC8012860F74D0017E1E8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5756A10828688A610034FD74 /* LikeControl.swift */,
+				57972E042868A8C700884180 /* AlphabetControl.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -137,7 +140,7 @@
 				57A370C7285B7569004E9C4D /* LoginFormController.swift */,
 				57DBC7E72860E4BA0017E1E8 /* AllGroupsViewController.swift */,
 				57DBC7E92860E4D50017E1E8 /* MyGroupsTableController.swift */,
-				57DBC7F32860F2080017E1E8 /* FriendsTableController.swift */,
+				57972E002868A50D00884180 /* FriendsController.swift */,
 				57DBC803286356C00017E1E8 /* PhotoViewController.swift */,
 			);
 			path = Controller;
@@ -233,12 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57972E012868A50D00884180 /* FriendsController.swift in Sources */,
 				57DBC7EA2860E4D50017E1E8 /* MyGroupsTableController.swift in Sources */,
 				57A370C8285B7569004E9C4D /* LoginFormController.swift in Sources */,
 				5756A10928688A610034FD74 /* LikeControl.swift in Sources */,
 				5703F696285B233B005D32F8 /* AppDelegate.swift in Sources */,
 				57DBC7EF2860E8750017E1E8 /* Group.swift in Sources */,
-				57DBC7F42860F2080017E1E8 /* FriendsTableController.swift in Sources */,
 				57DBC7E82860E4BA0017E1E8 /* AllGroupsViewController.swift in Sources */,
 				57DBC7FA2860F2850017E1E8 /* FriendCell.swift in Sources */,
 				5703F698285B233B005D32F8 /* SceneDelegate.swift in Sources */,
@@ -246,6 +249,7 @@
 				5756A10628661E610034FD74 /* ShadowView.swift in Sources */,
 				57DBC7F82860F2680017E1E8 /* PhotoCell.swift in Sources */,
 				57020E5E2864957900565762 /* UserStorage.swift in Sources */,
+				57972E052868A8C700884180 /* AlphabetControl.swift in Sources */,
 				57DBC804286356C00017E1E8 /* PhotoViewController.swift in Sources */,
 				57DBC8022860F74D0017E1E8 /* User.swift in Sources */,
 				579A8C20285BAA9F0059E0F4 /* LoginFormController+extension.swift in Sources */,
