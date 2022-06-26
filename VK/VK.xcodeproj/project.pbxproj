@@ -14,6 +14,7 @@
 		5703F69F285B233B005D32F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5703F69E285B233B005D32F8 /* Assets.xcassets */; };
 		5703F6A2285B233B005D32F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5703F6A0285B233B005D32F8 /* LaunchScreen.storyboard */; };
 		5756A10628661E610034FD74 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756A10528661E610034FD74 /* ShadowView.swift */; };
+		5756A10928688A610034FD74 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756A10828688A610034FD74 /* LikeControl.swift */; };
 		579A8C20285BAA9F0059E0F4 /* LoginFormController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579A8C1F285BAA9F0059E0F4 /* LoginFormController+extension.swift */; };
 		57A370C8285B7569004E9C4D /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A370C7285B7569004E9C4D /* LoginFormController.swift */; };
 		57DBC7E82860E4BA0017E1E8 /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC7E72860E4BA0017E1E8 /* AllGroupsViewController.swift */; };
@@ -37,6 +38,7 @@
 		5703F6A1285B233B005D32F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5703F6A3285B233B005D32F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5756A10528661E610034FD74 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		5756A10828688A610034FD74 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		579A8C1F285BAA9F0059E0F4 /* LoginFormController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginFormController+extension.swift"; sourceTree = "<group>"; };
 		57A370C7285B7569004E9C4D /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		57DBC7E72860E4BA0017E1E8 /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
@@ -93,12 +95,21 @@
 				57DBC7FF2860F54B0017E1E8 /* Model */,
 				57DBC7FE2860F5440017E1E8 /* Controller */,
 				57DBC7FD2860F53E0017E1E8 /* View */,
+				5756A10728688A430034FD74 /* Control */,
 				57020E5F2864A32600565762 /* Storage */,
 				57DBC7FC2860F5350017E1E8 /* Extension */,
 				57DBC8002860F55B0017E1E8 /* Resource */,
 				5703F6A3285B233B005D32F8 /* Info.plist */,
 			);
 			path = VK;
+			sourceTree = "<group>";
+		};
+		5756A10728688A430034FD74 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				5756A10828688A610034FD74 /* LikeControl.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 		57DBC7FC2860F5350017E1E8 /* Extension */ = {
@@ -224,6 +235,7 @@
 			files = (
 				57DBC7EA2860E4D50017E1E8 /* MyGroupsTableController.swift in Sources */,
 				57A370C8285B7569004E9C4D /* LoginFormController.swift in Sources */,
+				5756A10928688A610034FD74 /* LikeControl.swift in Sources */,
 				5703F696285B233B005D32F8 /* AppDelegate.swift in Sources */,
 				57DBC7EF2860E8750017E1E8 /* Group.swift in Sources */,
 				57DBC7F42860F2080017E1E8 /* FriendsTableController.swift in Sources */,

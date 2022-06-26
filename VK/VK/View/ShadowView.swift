@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ShadowView: UIView {
+@IBDesignable class ShadowView: UIView {
     
     var shadowRadius: CGFloat = 25 {
         didSet {
