@@ -16,6 +16,9 @@ class LikeControl: UIControl {
         // Drawing code
     }
     
+    @IBAction func likeButtonPressed(_ sender: Any) {
+    }
+    
     
     
     

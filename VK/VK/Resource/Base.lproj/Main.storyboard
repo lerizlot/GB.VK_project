@@ -201,22 +201,36 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="PhotoCell" id="kYQ-J1-w7O" customClass="PhotoCell" customModule="VK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0ez-CS-rSE">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Lpt-V1-TYb">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-mR-2GU">
-                                                    <rect key="frame" x="15" y="15" width="120" height="120"/>
+                                                    <rect key="frame" x="15" y="8" width="120" height="120"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="eGx-mR-2GU" secondAttribute="height" multiplier="1:1" id="Iok-WP-d5g"/>
-                                                        <constraint firstAttribute="height" constant="120" id="Zfp-Tp-x0e"/>
-                                                        <constraint firstAttribute="width" constant="120" id="pfI-fX-BSe"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="120" id="Zfp-Tp-x0e"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="120" id="pfI-fX-BSe"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLf-XK-Vc6">
+                                                    <rect key="frame" x="89" y="111" width="58.5" height="31"/>
+                                                    <color key="tintColor" systemColor="systemPinkColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=" 0">
+                                                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="likeButtonPressed:" destination="mfs-QE-M8U" eventType="touchUpInside" id="rlE-UD-tWf"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="centerY" secondItem="0ez-CS-rSE" secondAttribute="centerY" id="Oqt-6A-gFp"/>
-                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="centerX" secondItem="0ez-CS-rSE" secondAttribute="centerX" id="Uwg-lU-ywf"/>
+                                                <constraint firstAttribute="trailing" secondItem="eGx-mR-2GU" secondAttribute="trailing" constant="15" id="0Mq-RU-knl"/>
+                                                <constraint firstItem="gLf-XK-Vc6" firstAttribute="leading" secondItem="eGx-mR-2GU" secondAttribute="trailing" constant="-46" id="9ch-MT-URn"/>
+                                                <constraint firstItem="gLf-XK-Vc6" firstAttribute="top" secondItem="eGx-mR-2GU" secondAttribute="bottom" constant="-17" id="Jhg-NW-OEU"/>
+                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="leading" secondItem="Lpt-V1-TYb" secondAttribute="leading" constant="15" id="Krt-2e-qgg"/>
+                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="top" secondItem="Lpt-V1-TYb" secondAttribute="top" constant="8" id="ZjX-lT-ftI"/>
+                                                <constraint firstAttribute="bottom" secondItem="eGx-mR-2GU" secondAttribute="bottom" constant="22" id="cXz-RP-92d"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="150" height="150"/>
@@ -296,8 +310,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="groupImage" destination="sWe-m8-Tff" id="W7Z-Bp-CVq"/>
-                                    <outlet property="groupName" destination="Zgd-qJ-sOF" id="6jC-XW-Sug"/>
+                                    <outlet property="groupImage" destination="sWe-m8-Tff" id="Lk3-fW-J5B"/>
+                                    <outlet property="groupName" destination="Zgd-qJ-sOF" id="Mhl-eM-dQk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -357,27 +371,35 @@
                                                 <constraint firstItem="cPM-Wb-ukK" firstAttribute="leading" secondItem="vc1-94-ann" secondAttribute="leading" constant="20" id="dPU-tT-2XC"/>
                                                 <constraint firstItem="Njh-SP-lAy" firstAttribute="top" secondItem="vc1-94-ann" secondAttribute="topMargin" constant="28.5" id="e1X-45-zMS"/>
                                                 <constraint firstItem="Njh-SP-lAy" firstAttribute="centerY" secondItem="vc1-94-ann" secondAttribute="centerY" id="h01-7V-esQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="cPM-Wb-ukK" secondAttribute="bottom" constant="15" id="i9v-Cf-hCW"/>
+                                                <constraint firstAttribute="bottom" secondItem="cPM-Wb-ukK" secondAttribute="bottom" constant="15" id="lu8-Qn-P0D"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Njh-SP-lAy" secondAttribute="bottom" constant="28.5" id="u2e-eE-e80"/>
                                                 <constraint firstItem="Njh-SP-lAy" firstAttribute="leading" secondItem="cPM-Wb-ukK" secondAttribute="trailing" constant="50" id="vbJ-E8-ylE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="groupImage" destination="cPM-Wb-ukK" id="wt5-mb-8vJ"/>
-                                            <outlet property="groupName" destination="Njh-SP-lAy" id="dca-Ni-Oc4"/>
+                                            <outlet property="groupImage" destination="cPM-Wb-ukK" id="jZL-A7-yja"/>
+                                            <outlet property="groupName" destination="Njh-SP-lAy" id="DFj-A0-7VL"/>
                                             <segue destination="oUI-ff-LIR" kind="unwind" unwindAction="addSelectedGroupWithSegue:" id="5eq-0w-c1k"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="5kQ-8u-bFh" id="k0E-ek-9r9"/>
-                                    <outlet property="delegate" destination="5kQ-8u-bFh" id="J69-9N-d29"/>
+                                    <outlet property="dataSource" destination="5kQ-8u-bFh" id="fFf-An-JEz"/>
+                                    <outlet property="delegate" destination="5kQ-8u-bFh" id="9vI-WW-Ooj"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7A-eq-w9e">
+                                <rect key="frame" x="20" y="88" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1nZ-Ki-2cv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="X7A-eq-w9e" firstAttribute="leading" secondItem="1nZ-Ki-2cv" secondAttribute="leading" constant="20" id="Ur0-id-1v9"/>
+                            <constraint firstItem="1nZ-Ki-2cv" firstAttribute="trailing" secondItem="X7A-eq-w9e" secondAttribute="trailing" constant="20" id="VVJ-5m-ZF4"/>
+                            <constraint firstItem="X7A-eq-w9e" firstAttribute="top" secondItem="1nZ-Ki-2cv" secondAttribute="top" id="cir-dY-Mkt"/>
                             <constraint firstItem="1nZ-Ki-2cv" firstAttribute="trailing" secondItem="Xcz-sn-jnE" secondAttribute="trailing" id="gHC-PL-sAm"/>
                             <constraint firstItem="Xcz-sn-jnE" firstAttribute="top" secondItem="1nZ-Ki-2cv" secondAttribute="top" id="goj-pC-0JZ"/>
                             <constraint firstItem="1nZ-Ki-2cv" firstAttribute="bottom" secondItem="Xcz-sn-jnE" secondAttribute="bottom" id="ka8-dg-h9R"/>
@@ -456,6 +478,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
@@ -465,6 +488,9 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
