@@ -9,16 +9,6 @@ import UIKit
 
 class MyGroupsTableController: UITableViewController {
     
-    // MARK: - Database
-    
-    var groups = [
-        Group(name: "Animal Planet", image: UIImage(named: "animalPlanet")),
-        Group(name: "Discovery Knowledge", image: UIImage(named: "discoveryKnowledge")),
-        Group(name: "Discovery Science", image: UIImage(named: "discoveryScience")),
-        Group(name: "Investigation Discovery", image: UIImage(named: "investigationDiscovery")),
-        Group(name: "Military History", image: UIImage(named: "militaryHistory")),
-    ]
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -76,7 +66,7 @@ class MyGroupsTableController: UITableViewController {
         if let sourceVC = segue.source as? AllGroupsViewController,
            let indexPath = sourceVC.tableView.indexPathForSelectedRow {
             // получаем группу по индексу
-            let group = sourceVC.groups[indexPath.row]
+            let group = sourceVC.allGroups[indexPath.row]
             
             // проверка, если группы нет в списке - она добавляется
             if !groups.contains(where: {$0.name == group.name}) {

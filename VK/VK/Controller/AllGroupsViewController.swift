@@ -9,9 +9,9 @@ import UIKit
 
 class AllGroupsViewController: UIViewController {
     
-    // MARK: - Database
+    // MARK: - GroupStorage
     
-    let groups = [
+    let allGroups = [
         Group(name: "Nat Geo Wild", image: UIImage(named: "natGeoWild")),
         Group(name: "Science", image: UIImage(named: "science")),
         Group(name: "National Geographic", image: UIImage(named: "nationalGeographic")),
@@ -55,7 +55,7 @@ class AllGroupsViewController: UIViewController {
 extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        groups.count
+        allGroups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,8 +63,8 @@ extension AllGroupsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroups", for: indexPath)
         
         var content = cell.defaultContentConfiguration()
-        content.text = groups[indexPath.row].name
-        content.image = groups[indexPath.row].image
+        content.text = allGroups[indexPath.row].name
+        content.image = allGroups[indexPath.row].image
         
         cell.contentConfiguration = content
         
