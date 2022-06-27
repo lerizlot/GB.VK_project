@@ -21,11 +21,23 @@ class PhotoViewController: UIViewController {
         }
     }
     
+    func setLikeControl() {
+        let itemSize = UIScreen.main.bounds.width/3 - 3
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: itemSize, height: itemSize)
+        
+        layout.minimumInteritemSpacing = 3
+        layout.minimumLineSpacing = 3
+        
+        collectionView.collectionViewLayout = layout
+    }
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setLikeControl()
         // Do any additional setup after loading the view.
     }
     
