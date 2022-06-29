@@ -13,15 +13,28 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var friendPhoto: UIImageView!
     
-    var likeControl = LikeControl()
+    @IBOutlet var likeControl: LikeControl!
+    @IBOutlet var container: UIView!
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        likeControl.frame = CGRect(x: self.frame.size.width - 40,
-                                   y: self.frame.size.height - 30,
-                                   width: 38,
-                                   height: 28)
-        self.addSubview(likeControl)
+    override func awakeFromNib() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        tap.numberOfTouchesRequired = 1
+        container.addGestureRecognizer(tap)
     }
     
+    @objc func handleTap(_: UITapGestureRecognizer) {
+        likeControl.isLiked.toggle()
+        
+        if likeControl.isLiked {
+            likeControl.likePicture.image = (UIImage(systemName: "arrow.up.heart.fill"))
+            likeControl.likePicture.transform3D = scale
+        } else {
+            likeControl.likePicture.image = (UIImage(systemName: "arrow.down.heart"))
+            likeControl.likePicture.transform3D = scaleBack
+        }
+    }
+    
+  //  let flip = CGAffineTransform
+    let scale = CATransform3DMakeScale(1.3, 1.3, 1.3)
+    let scaleBack = CATransform3DMakeScale(1, 1, 1)
 }

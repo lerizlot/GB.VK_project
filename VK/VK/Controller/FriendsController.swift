@@ -9,7 +9,8 @@ import UIKit
 
 class FriendsController: UIViewController {
     
-    var sectionArray = ["A","B","C","D", "E", "F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    // создаем массив букв которые будут выводиться в боковом списке
+    var firstLetters: [String] = []
     
     // MARK: - Outlets
     
@@ -24,7 +25,7 @@ class FriendsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
     }
 }
 
@@ -54,7 +55,7 @@ extension FriendsController: UITableViewDataSource {
 extension FriendsController: UITableViewDelegate {
     
         func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-            return sectionArray
+            return firstLetters
         }
     
     // MARK: - Segue

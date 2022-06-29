@@ -22,7 +22,7 @@ class GroupCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-//       groupImage?.layer.cornerRadius = groupImage.frame.size.width / 2
+        groupImage?.layer.cornerRadius = groupImage.frame.size.width / 2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

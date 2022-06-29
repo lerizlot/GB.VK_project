@@ -28,7 +28,8 @@ import UIKit
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        layer.cornerRadius = frame.size.width / 2
+        // задаем круглую форму shadowView
+        layer.cornerRadius = bounds.height / 2
     }
     
     func setupShadowView() {
