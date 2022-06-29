@@ -16,9 +16,9 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet var likeControl: LikeControl!
     @IBOutlet var container: UIView!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        tap.numberOfTouchesRequired = 2
+        tap.numberOfTouchesRequired = 1
         container.addGestureRecognizer(tap)
     }
     
@@ -26,9 +26,15 @@ class PhotoCell: UICollectionViewCell {
         likeControl.isLiked.toggle()
         
         if likeControl.isLiked {
-            likeControl.likePicture.image = (UIImage(systemName: "suit.heart.fill"))
+            likeControl.likePicture.image = (UIImage(systemName: "arrow.up.heart.fill"))
+            likeControl.likePicture.transform3D = scale
         } else {
-            likeControl.likePicture.image = nil
+            likeControl.likePicture.image = (UIImage(systemName: "arrow.down.heart"))
+            likeControl.likePicture.transform3D = scaleBack
         }
     }
+    
+  //  let flip = CGAffineTransform
+    let scale = CATransform3DMakeScale(1.3, 1.3, 1.3)
+    let scaleBack = CATransform3DMakeScale(1, 1, 1)
 }

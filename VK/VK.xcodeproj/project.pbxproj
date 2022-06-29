@@ -170,6 +170,8 @@
 			dependencies = (
 			);
 			name = VK;
+			packageProductDependencies = (
+			);
 			productName = VK;
 			productReference = 5703F692285B233B005D32F8 /* VK.app */;
 			productType = "com.apple.product-type.application";
@@ -198,6 +200,8 @@
 				Base,
 			);
 			mainGroup = 5703F689285B233B005D32F8;
+			packageReferences = (
+			);
 			productRefGroup = 5703F693285B233B005D32F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

@@ -18,7 +18,7 @@ class FriendCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        friendImage.layer.cornerRadius = friendImage.bounds.width / 2
+        //friendImage.layer.cornerRadius = friendImage.bounds.width / 2
     }
     
     override func layoutSubviews() {

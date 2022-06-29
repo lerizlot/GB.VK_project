@@ -9,7 +9,11 @@ import UIKit
 
 @IBDesignable class LikeControl: UIControl {
 
-    @IBOutlet var likePicture: UIImageView!
+    @IBOutlet var likePicture: UIImageView! {
+        didSet {
+            likePicture.image = (UIImage(systemName: "heart"))
+        }
+    }
     
     var isLiked: Bool = false
     
