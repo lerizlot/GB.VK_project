@@ -14,6 +14,14 @@
 		5703F69F285B233B005D32F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5703F69E285B233B005D32F8 /* Assets.xcassets */; };
 		5703F6A2285B233B005D32F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5703F6A0285B233B005D32F8 /* LaunchScreen.storyboard */; };
 		5756A10628661E610034FD74 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5756A10528661E610034FD74 /* ShadowView.swift */; };
+		576FBC97286E12CE0009181C /* GroupXibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBC95286E12CE0009181C /* GroupXibCell.swift */; };
+		576FBC98286E12CE0009181C /* GroupXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576FBC96286E12CE0009181C /* GroupXibCell.xib */; };
+		57872E6C286E2AE800113E95 /* NewsXibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57872E6A286E2AE800113E95 /* NewsXibCell.swift */; };
+		57872E6D286E2AE800113E95 /* NewsXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57872E6B286E2AE800113E95 /* NewsXibCell.xib */; };
+		57872E70286E2B0400113E95 /* FriendXibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57872E6E286E2B0400113E95 /* FriendXibCell.swift */; };
+		57872E71286E2B0400113E95 /* FriendXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57872E6F286E2B0400113E95 /* FriendXibCell.xib */; };
+		57872E75286E2B5B00113E95 /* PhotoXibCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57872E73286E2B5B00113E95 /* PhotoXibCell.swift */; };
+		57872E76286E2B5B00113E95 /* PhotoXibCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57872E74286E2B5B00113E95 /* PhotoXibCell.xib */; };
 		57972E012868A50D00884180 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E002868A50D00884180 /* FriendsController.swift */; };
 		57972E072868BB4500884180 /* GroupStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E062868BB4500884180 /* GroupStorage.swift */; };
 		57972E092868C3BD00884180 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57972E082868C3BD00884180 /* LikeControl.swift */; };
@@ -38,6 +46,14 @@
 		5703F6A1285B233B005D32F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5703F6A3285B233B005D32F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5756A10528661E610034FD74 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		576FBC95286E12CE0009181C /* GroupXibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupXibCell.swift; sourceTree = "<group>"; };
+		576FBC96286E12CE0009181C /* GroupXibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupXibCell.xib; sourceTree = "<group>"; };
+		57872E6A286E2AE800113E95 /* NewsXibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsXibCell.swift; sourceTree = "<group>"; };
+		57872E6B286E2AE800113E95 /* NewsXibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsXibCell.xib; sourceTree = "<group>"; };
+		57872E6E286E2B0400113E95 /* FriendXibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendXibCell.swift; sourceTree = "<group>"; };
+		57872E6F286E2B0400113E95 /* FriendXibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendXibCell.xib; sourceTree = "<group>"; };
+		57872E73286E2B5B00113E95 /* PhotoXibCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoXibCell.swift; sourceTree = "<group>"; };
+		57872E74286E2B5B00113E95 /* PhotoXibCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoXibCell.xib; sourceTree = "<group>"; };
 		57972E002868A50D00884180 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		57972E062868BB4500884180 /* GroupStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStorage.swift; sourceTree = "<group>"; };
 		57972E082868C3BD00884180 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
@@ -112,9 +128,49 @@
 			path = Control;
 			sourceTree = "<group>";
 		};
+		576FBC94286E129C0009181C /* GroupXib */ = {
+			isa = PBXGroup;
+			children = (
+				576FBC95286E12CE0009181C /* GroupXibCell.swift */,
+				576FBC96286E12CE0009181C /* GroupXibCell.xib */,
+			);
+			path = GroupXib;
+			sourceTree = "<group>";
+		};
+		57872E68286E2ABA00113E95 /* NewsXib */ = {
+			isa = PBXGroup;
+			children = (
+				57872E6A286E2AE800113E95 /* NewsXibCell.swift */,
+				57872E6B286E2AE800113E95 /* NewsXibCell.xib */,
+			);
+			path = NewsXib;
+			sourceTree = "<group>";
+		};
+		57872E69286E2ACC00113E95 /* FriendXib */ = {
+			isa = PBXGroup;
+			children = (
+				57872E6E286E2B0400113E95 /* FriendXibCell.swift */,
+				57872E6F286E2B0400113E95 /* FriendXibCell.xib */,
+			);
+			path = FriendXib;
+			sourceTree = "<group>";
+		};
+		57872E72286E2B3600113E95 /* PhotoXib */ = {
+			isa = PBXGroup;
+			children = (
+				57872E73286E2B5B00113E95 /* PhotoXibCell.swift */,
+				57872E74286E2B5B00113E95 /* PhotoXibCell.xib */,
+			);
+			path = PhotoXib;
+			sourceTree = "<group>";
+		};
 		57DBC7FD2860F53E0017E1E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				57872E72286E2B3600113E95 /* PhotoXib */,
+				57872E69286E2ACC00113E95 /* FriendXib */,
+				57872E68286E2ABA00113E95 /* NewsXib */,
+				576FBC94286E129C0009181C /* GroupXib */,
 				57DBC7F92860F2850017E1E8 /* FriendCell.swift */,
 				57DBC7EC2860E6210017E1E8 /* GroupCell.swift */,
 				57DBC7F72860F2680017E1E8 /* PhotoCell.swift */,
@@ -216,7 +272,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57872E6D286E2AE800113E95 /* NewsXibCell.xib in Resources */,
+				57872E76286E2B5B00113E95 /* PhotoXibCell.xib in Resources */,
 				5703F6A2285B233B005D32F8 /* LaunchScreen.storyboard in Resources */,
+				576FBC98286E12CE0009181C /* GroupXibCell.xib in Resources */,
+				57872E71286E2B0400113E95 /* FriendXibCell.xib in Resources */,
 				5703F69F285B233B005D32F8 /* Assets.xcassets in Resources */,
 				5703F69D285B233B005D32F8 /* Main.storyboard in Resources */,
 			);
@@ -232,14 +292,18 @@
 				57972E012868A50D00884180 /* FriendsController.swift in Sources */,
 				57DBC7EA2860E4D50017E1E8 /* MyGroupsTableController.swift in Sources */,
 				57A370C8285B7569004E9C4D /* LoginFormController.swift in Sources */,
+				576FBC97286E12CE0009181C /* GroupXibCell.swift in Sources */,
 				5703F696285B233B005D32F8 /* AppDelegate.swift in Sources */,
 				57DBC7EF2860E8750017E1E8 /* Group.swift in Sources */,
 				57DBC7E82860E4BA0017E1E8 /* AllGroupsViewController.swift in Sources */,
 				57DBC7FA2860F2850017E1E8 /* FriendCell.swift in Sources */,
+				57872E70286E2B0400113E95 /* FriendXibCell.swift in Sources */,
 				5703F698285B233B005D32F8 /* SceneDelegate.swift in Sources */,
 				57DBC7ED2860E6210017E1E8 /* GroupCell.swift in Sources */,
 				5756A10628661E610034FD74 /* ShadowView.swift in Sources */,
 				57972E092868C3BD00884180 /* LikeControl.swift in Sources */,
+				57872E6C286E2AE800113E95 /* NewsXibCell.swift in Sources */,
+				57872E75286E2B5B00113E95 /* PhotoXibCell.swift in Sources */,
 				57DBC7F82860F2680017E1E8 /* PhotoCell.swift in Sources */,
 				57020E5E2864957900565762 /* UserStorage.swift in Sources */,
 				57DBC804286356C00017E1E8 /* PhotoViewController.swift in Sources */,

@@ -26,8 +26,8 @@ class AllGroupsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.dataSource = self
-            tableView.delegate = self
+            self.tableView.dataSource = self
+            self.tableView.delegate = self
         }
     }
     
@@ -37,7 +37,7 @@ class AllGroupsViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "AllGroupsXib")
     }
     
     
@@ -61,7 +61,7 @@ extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as? GroupCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsXibCell", for: indexPath) as? GroupXibCell else {
             
             preconditionFailure("Error")
         }
