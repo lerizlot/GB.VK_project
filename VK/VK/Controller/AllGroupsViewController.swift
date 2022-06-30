@@ -61,13 +61,13 @@ extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroups", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as? GroupCell else {
+            
+            preconditionFailure("Error")
+        }
         
-        var content = cell.defaultContentConfiguration()
-        content.text = allGroups[indexPath.row].name
-        content.image = allGroups[indexPath.row].image
-        
-        cell.contentConfiguration = content
+        cell.groupImage.image = allGroups[indexPath.row].image
+        cell.groupName.text = allGroups[indexPath.row].name
         
         return cell
     }

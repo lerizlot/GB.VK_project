@@ -28,19 +28,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFj-1a-tkI">
-                                        <rect key="frame" x="185" y="332" width="44.5" height="25.5"/>
-                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                        <rect key="frame" x="185.5" y="332" width="43" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkp-jx-uyI">
-                                        <rect key="frame" x="169" y="437.5" width="76" height="25.5"/>
-                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                        <rect key="frame" x="170.5" y="433" width="73.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail or phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Yq-rV-2Xa">
-                                        <rect key="frame" x="122" y="365.5" width="170" height="34"/>
+                                        <rect key="frame" x="122" y="361" width="170" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="999" constant="170" id="bhq-0A-SqY"/>
                                         </constraints>
@@ -48,7 +48,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y3V-vH-TnJ">
-                                        <rect key="frame" x="122" y="471" width="170" height="34"/>
+                                        <rect key="frame" x="122" y="462" width="170" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="999" constant="170" id="aXg-Ee-VnZ"/>
                                         </constraints>
@@ -56,11 +56,11 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4f-Ha-Pvh">
-                                        <rect key="frame" x="140.5" y="560" width="133" height="43"/>
+                                        <rect key="frame" x="140.5" y="551" width="133" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="133" placeholder="YES" id="rlZ-Sv-YuL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="22"/>
                                         <color key="tintColor" red="0.33333334329999997" green="0.45490196350000001" blue="0.62352943419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log me in"/>
@@ -130,7 +130,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="100" id="6t4-Br-L72" customClass="FriendCell" customModule="VK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="100" id="6t4-Br-L72" customClass="FriendCell" customModule="VK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6t4-Br-L72" id="RnB-r8-FMs">
@@ -151,8 +151,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-4X-3FZ">
-                                                    <rect key="frame" x="140" y="37.5" width="225.5" height="25.5"/>
-                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                                    <rect key="frame" x="140" y="39.5" width="225.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -227,44 +227,54 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-mR-2GU">
                                                     <rect key="frame" x="15" y="8" width="120" height="105"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" priority="999" constant="105" id="BzV-00-fcO"/>
-                                                        <constraint firstAttribute="width" priority="999" constant="120" id="dI9-1w-40h"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="105" id="0e0-uB-Ibd"/>
+                                                        <constraint firstAttribute="width" priority="999" constant="120" id="5rP-Qi-C48"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38Y-QR-6hC" customClass="LikeControl" customModule="VK" customModuleProvider="target">
-                                                    <rect key="frame" x="112" y="116" width="33" height="33"/>
+                                                    <rect key="frame" x="75" y="116" width="60" height="29"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-Rn-2De">
-                                                            <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="29"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="33" id="9rD-8e-MSX"/>
-                                                                <constraint firstAttribute="height" constant="33" id="qCm-NM-7qe"/>
+                                                                <constraint firstAttribute="width" constant="29" id="6IJ-oS-6m7"/>
+                                                                <constraint firstAttribute="height" constant="29" id="udn-zI-E7a"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-6y-9sU">
+                                                            <rect key="frame" x="33" y="4" width="27" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" button="YES"/>
                                                     </accessibility>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="PcG-Rn-2De" secondAttribute="bottom" id="PDa-5z-23n"/>
-                                                        <constraint firstAttribute="trailing" secondItem="PcG-Rn-2De" secondAttribute="trailing" id="PQq-m9-7O6"/>
-                                                        <constraint firstItem="PcG-Rn-2De" firstAttribute="top" secondItem="38Y-QR-6hC" secondAttribute="top" id="S9t-9v-080"/>
-                                                        <constraint firstAttribute="width" constant="33" id="Tjy-y5-GRl"/>
-                                                        <constraint firstItem="PcG-Rn-2De" firstAttribute="leading" secondItem="38Y-QR-6hC" secondAttribute="leading" id="kQC-Da-Pd3"/>
-                                                        <constraint firstAttribute="height" constant="33" id="qn7-cJ-vcs"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PJS-6y-9sU" secondAttribute="bottom" constant="4" id="37Z-ff-Q5s"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PJS-6y-9sU" secondAttribute="trailing" id="6Hu-rA-n6X"/>
+                                                        <constraint firstAttribute="bottom" secondItem="PcG-Rn-2De" secondAttribute="bottom" id="8fg-EB-BP0"/>
+                                                        <constraint firstItem="PcG-Rn-2De" firstAttribute="top" secondItem="38Y-QR-6hC" secondAttribute="top" id="ASv-Ov-fqw"/>
+                                                        <constraint firstItem="PcG-Rn-2De" firstAttribute="leading" secondItem="38Y-QR-6hC" secondAttribute="leading" id="G75-uH-y3S"/>
+                                                        <constraint firstAttribute="height" constant="29" id="Mz2-YG-dW7"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Rbm-cH-Twm"/>
+                                                        <constraint firstItem="PJS-6y-9sU" firstAttribute="top" secondItem="38Y-QR-6hC" secondAttribute="top" constant="4" id="Ts7-EM-ekf"/>
+                                                        <constraint firstItem="PJS-6y-9sU" firstAttribute="leading" secondItem="PcG-Rn-2De" secondAttribute="trailing" constant="4" id="v4y-kr-D7o"/>
                                                     </constraints>
                                                     <connections>
                                                         <outlet property="likePicture" destination="PcG-Rn-2De" id="3Cj-Oa-09z"/>
+                                                        <outlet property="likeQuantity" destination="PJS-6y-9sU" id="wum-M8-pQw"/>
                                                     </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="38Y-QR-6hC" secondAttribute="trailing" constant="5" id="B8G-EG-ijk"/>
-                                                <constraint firstItem="38Y-QR-6hC" firstAttribute="top" secondItem="eGx-mR-2GU" secondAttribute="bottom" constant="3" id="C9a-IW-f0a"/>
-                                                <constraint firstAttribute="trailing" secondItem="eGx-mR-2GU" secondAttribute="trailing" constant="15" id="E92-Y4-8qP"/>
-                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="top" secondItem="Lpt-V1-TYb" secondAttribute="top" constant="8" id="UHM-td-Azz"/>
-                                                <constraint firstAttribute="bottom" secondItem="38Y-QR-6hC" secondAttribute="bottom" constant="1" id="plK-1x-vXF"/>
-                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="leading" secondItem="Lpt-V1-TYb" secondAttribute="leading" constant="15" id="xfM-Kc-qLJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="38Y-QR-6hC" secondAttribute="trailing" constant="15" id="Bp6-f4-YJq"/>
+                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="leading" secondItem="Lpt-V1-TYb" secondAttribute="leading" constant="15" id="ZCt-3B-idR"/>
+                                                <constraint firstItem="eGx-mR-2GU" firstAttribute="top" secondItem="Lpt-V1-TYb" secondAttribute="top" constant="8" id="jZj-9L-e1e"/>
+                                                <constraint firstAttribute="trailing" secondItem="eGx-mR-2GU" secondAttribute="trailing" constant="15" id="p8U-rZ-rTZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="38Y-QR-6hC" secondAttribute="bottom" constant="5" id="s3S-qY-0Vo"/>
+                                                <constraint firstItem="38Y-QR-6hC" firstAttribute="top" secondItem="eGx-mR-2GU" secondAttribute="bottom" constant="3" id="xYq-9D-4At"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="150" height="150"/>
@@ -309,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="D02-7I-fBr" customClass="GroupCell" customModule="VK" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="100" id="D02-7I-fBr" customClass="GroupCell" customModule="VK" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D02-7I-fBr" id="n0d-9L-zAQ">
@@ -330,8 +340,8 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-qJ-sOF">
-                                            <rect key="frame" x="140" y="37.5" width="254" height="25.5"/>
-                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                            <rect key="frame" x="140" y="39.5" width="254" height="21"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -381,7 +391,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllGroups" rowHeight="100" id="pf2-f7-fq5" customClass="GroupCell" customModule="VK" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllGroupsCell" rowHeight="100" id="pf2-f7-fq5" customClass="GroupCell" customModule="VK" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pf2-f7-fq5" id="vc1-94-ann">
@@ -404,8 +414,8 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njh-SP-lAy">
                                                     <rect key="frame" x="140" y="39.5" width="234" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                                    <color key="textColor" systemColor="systemGreenColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -432,6 +442,7 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="5kQ-8u-bFh" id="fFf-An-JEz"/>
                                     <outlet property="delegate" destination="5kQ-8u-bFh" id="9vI-WW-Ooj"/>
@@ -528,6 +539,12 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -9,9 +9,16 @@ import UIKit
 
 @IBDesignable class LikeControl: UIControl {
 
+    @IBOutlet var likeQuantity: UILabel! {
+        didSet {
+            likeQuantity.text = "0"
+        }
+    }
+    
     @IBOutlet var likePicture: UIImageView! {
         didSet {
             likePicture.image = (UIImage(systemName: "heart"))
+            
         }
     }
     

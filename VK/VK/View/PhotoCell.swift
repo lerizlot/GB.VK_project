@@ -27,9 +27,11 @@ class PhotoCell: UICollectionViewCell {
         
         if likeControl.isLiked {
             likeControl.likePicture.image = (UIImage(systemName: "arrow.up.heart.fill"))
+            likeControl.likeQuantity.text = "1"
             likeControl.likePicture.transform3D = scale
         } else {
             likeControl.likePicture.image = (UIImage(systemName: "arrow.down.heart"))
+            likeControl.likeQuantity.text = "0"
             likeControl.likePicture.transform3D = scaleBack
         }
     }
