@@ -24,7 +24,7 @@ class FriendCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        friendImage.layer.cornerRadius = friendImage.frame.size.width / 2
+        friendImage.layer.cornerRadius = friendImage.bounds.height / 2
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
