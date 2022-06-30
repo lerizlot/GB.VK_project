@@ -66,14 +66,8 @@ extension AllGroupsViewController: UITableViewDataSource {
             preconditionFailure("Error")
         }
         
-        var content = cell.defaultContentConfiguration()
-        content.text = allGroups[indexPath.row].name
-        content.image = allGroups[indexPath.row].image
-        
-        content.imageProperties.maximumSize.height = 100
-        content.imageProperties.maximumSize.width = 100
-        
-        cell.contentConfiguration = content
+        cell.groupImage.image = allGroups[indexPath.row].image
+        cell.groupName.text = allGroups[indexPath.row].name
         
         return cell
     }
