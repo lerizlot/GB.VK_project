@@ -41,6 +41,8 @@ class NewsXibCell: UITableViewCell {
         // Initialization code
     }
     
+    // MARK: - Cell configuration
+
     func configure(news: News) {
         newsAvatar.image = news.avatar
         newsName.text = news.name

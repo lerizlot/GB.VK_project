@@ -8,6 +8,8 @@
 import UIKit
 
 class FriendXibCell: UITableViewCell {
+    
+    // MARK: - Outlets
 
     @IBOutlet weak var friendPhoto: UIImageView!
     @IBOutlet weak var friendName: UILabel!
@@ -17,10 +19,10 @@ class FriendXibCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
 }

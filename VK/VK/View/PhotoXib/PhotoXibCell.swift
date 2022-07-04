@@ -8,7 +8,13 @@
 import UIKit
 
 class PhotoXibCell: UICollectionViewCell {
+    
+    // MARK: - Outlets
 
+    @IBOutlet weak var friendPhoto: UIImageView!
+    @IBOutlet var likeControl: LikeControl!
+    @IBOutlet var container: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

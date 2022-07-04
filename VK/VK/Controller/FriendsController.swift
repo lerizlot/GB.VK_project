@@ -9,6 +9,8 @@ import UIKit
 
 class FriendsController: UIViewController {
     
+    var gradientView = GradientView()
+    
     // создаем массив букв которые будут выводиться в боковом списке
     var firstLetters: [String] = []
     
