@@ -17,7 +17,6 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -43,6 +42,15 @@ class LoginFormController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)),
                                                name: UIResponder.keyboardDidHideNotification,
                                                object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 2,
+                          delay: 1,
+                          options: [.curveEaseInOut, .autoreverse, .repeat]) {
+            self.logoImage.layer.position.x += 150
+            self.logoImage.alpha = 0
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

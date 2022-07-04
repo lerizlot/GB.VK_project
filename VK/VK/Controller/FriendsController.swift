@@ -90,8 +90,20 @@ extension FriendsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         String(sortedFriends.keys.sorted()[section])
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.lightGray
+    }
+//
 //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return gradientView
+//        return
+//    }
+//
+//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        return "Footer \(section)"
+//    }
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        return
 //    }
 }
 

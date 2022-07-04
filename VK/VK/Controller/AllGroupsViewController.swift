@@ -9,6 +9,14 @@ import UIKit
 
 class AllGroupsViewController: UIViewController {
     
+    var filteredGroups = [Group]()
+    
+    @IBOutlet weak var searchBarGroup: UISearchBar! {
+        didSet {
+            searchBarGroup.delegate = self
+        }
+    }
+    
     // MARK: - GroupStorage
     
     let allGroups = [
@@ -36,27 +44,18 @@ class AllGroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "AllGroupsXib")
+        
+        filteredGroups = allGroups
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
+
 // MARK: - Extensions
 
 extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        allGroups.count
+        filteredGroups.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,8 +65,8 @@ extension AllGroupsViewController: UITableViewDataSource {
             preconditionFailure("Error")
         }
         
-        cell.groupImage.image = allGroups[indexPath.row].image
-        cell.groupName.text = allGroups[indexPath.row].name
+        cell.groupImage.image = filteredGroups[indexPath.row].image
+        cell.groupName.text = filteredGroups[indexPath.row].name
         
         return cell
     }
@@ -78,8 +77,24 @@ extension AllGroupsViewController: UITableViewDataSource {
 }
 
 extension AllGroupsViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+    }
+}
+
+extension AllGroupsViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //print(searchText)
+        
+        if searchText.isEmpty {
+            filteredGroups = allGroups
+        } else {
+            // перебираем названия наших групп и ищем если там есть буква из строки поиска
+            filteredGroups = allGroups.filter {$0.name.contains(searchText)} //.description.lowercased()
+        }
+        // обязательно для обновления результата
+        tableView.reloadData()
     }
 }
