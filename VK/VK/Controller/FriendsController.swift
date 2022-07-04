@@ -88,6 +88,9 @@ extension FriendsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         String(sortedFriends.keys.sorted()[section])
     }
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        return gradientView
+//    }
 }
 
 extension FriendsController: UITableViewDelegate {
