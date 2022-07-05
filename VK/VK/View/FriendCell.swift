@@ -54,5 +54,4 @@ class FriendCell: UITableViewCell {
         
         self.friendImage.layer.add(animation, forKey: nil)
     }
-    
 }

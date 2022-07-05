@@ -6,25 +6,25 @@
 //
 
 import UIKit
-
-class FriendXibCell: UITableViewCell {
-    
-    static let reuseIdentifier = "FriendXibCell"
-    
-    // MARK: - Outlets
-
-    @IBOutlet weak var friendPhoto: UIImageView!
-    @IBOutlet weak var friendName: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
 //
-//        // Configure the view for the selected state
+//class FriendXibCell: UITableViewCell {
+//
+//    static let reuseIdentifier = "FriendXibCell"
+//
+//    // MARK: - Outlets
+//
+//    @IBOutlet weak var friendPhoto: UIImageView!
+//    @IBOutlet weak var friendName: UILabel!
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
 //    }
-    
-}
+//
+////    override func setSelected(_ selected: Bool, animated: Bool) {
+////        super.setSelected(selected, animated: animated)
+////
+////        // Configure the view for the selected state
+////    }
+//
+//}

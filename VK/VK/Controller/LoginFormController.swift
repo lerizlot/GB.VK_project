@@ -21,6 +21,48 @@ class LoginFormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //loadingAnimation()
+        
+        let dot1 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 - 35), y: (self.view.bounds.height / 2 + 120), width: 15, height: 15)))
+        dot1.layer.cornerRadius = dot1.bounds.height / 2
+        dot1.layer.borderColor = UIColor.white.cgColor
+        dot1.backgroundColor = UIColor.white
+        dot1.layer.masksToBounds = true
+        dot1.layer.borderWidth = 2
+        
+        let dot2 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 - 10), y: (self.view.bounds.height / 2 + 120), width: 15, height: 15)))
+        dot2.layer.cornerRadius = dot2.bounds.height / 2
+        dot2.layer.borderColor = UIColor.white.cgColor
+        dot2.backgroundColor = UIColor.white
+        dot2.layer.masksToBounds = true
+        dot2.layer.borderWidth = 2
+        
+        let dot3 = UIView.init(frame: (CGRect(x: (self.view.bounds.width / 2 + 15), y: (self.view.bounds.height / 2 + 120), width: 15, height: 15)))
+        dot3.layer.cornerRadius = dot3.bounds.height / 2
+        dot3.layer.borderColor = UIColor.white.cgColor
+        dot3.backgroundColor = UIColor.white
+        dot3.layer.masksToBounds = true
+        dot3.layer.borderWidth = 2
+        
+        self.view.addSubview(dot1)
+        self.view.addSubview(dot2)
+        self.view.addSubview(dot3)
+        
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       options: [.autoreverse, .repeat],
+                       animations: { dot1.backgroundColor = UIColor.gray },
+                       completion: nil)
+        UIView.animate(withDuration: 1,
+                       delay: 0.5,
+                       options: [.autoreverse, .repeat],
+                       animations: { dot2.backgroundColor = UIColor.gray },
+                       completion: nil)
+        UIView.animate(withDuration: 1,
+                       delay: 1,
+                       options: [.autoreverse, .repeat],
+                       animations: { dot3.backgroundColor = UIColor.gray },
+                       completion: nil)
         
         navigationController?.setNavigationBarHidden(true, animated: false)
         
@@ -45,11 +87,14 @@ class LoginFormController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 2,
-                          delay: 1,
+        UIView.animate(withDuration: 3,
+                       delay: 0.5,
                           options: [.curveEaseInOut, .autoreverse, .repeat]) {
-            self.logoImage.layer.position.x += 150
+            self.logoImage.layer.position.y += 100
             self.logoImage.alpha = 0
+//        } completion: { _ in
+//            self.logoImage.layer.position.x -= 150
+//            self.logoImage.alpha = 1
         }
     }
     
@@ -75,6 +120,8 @@ class LoginFormController: UIViewController {
         // Вернем результат
         return checkResult
     }
+    
+    // MARK: - Login
     
     // Проверка введенных данных
     func checkUserData() -> Bool {
@@ -142,4 +189,21 @@ class LoginFormController: UIViewController {
     // MARK: - UnwindSegue
     
     @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){}
+}
+
+// MARK: - Three dots loading animation
+
+//func loadingAnimation() {
+//
+//    let dot1 = UIView.init(frame: CGRect(x: (self.view.bounds.width / 2 - 35), y: (self.view.bounds.height / 2 + 75), width: 15, height: 15))
+//    dot1.layer.cornerRadius = dot1.bounds.height / 2
+//    dot1.layer.borderColor = UIColor.white.cgColor
+//    dot1.backgroundColor = .white
+//    dot1.layer.masksToBounds = true
+//    dot1.layer.borderWidth = 2
+//}
+
+private func loadingAnimation() {
+    
+ 
 }

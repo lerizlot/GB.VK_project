@@ -25,12 +25,14 @@ class PhotoCell: UICollectionViewCell {
     func animateLike() {
         UIView.transition(with: likeControl.likePicture,
                           duration: 0.3,
-                          options: .transitionFlipFromTop, animations: nil)
+                          options: .transitionFlipFromTop,
+                          animations: nil)
     }
     func animateLabel() {
         UIView.transition(with: likeControl.likeQuantity,
                           duration: 0.3,
-                          options: .transitionFlipFromTop, animations: nil)
+                          options: .transitionFlipFromTop,
+                          animations: nil)
     }
     
     @objc func handleTap(_: UITapGestureRecognizer) {
@@ -48,8 +50,4 @@ class PhotoCell: UICollectionViewCell {
             animateLabel()
         }
     }
-    
-  //  let flip = CGAffineTransform
-    let scale = CATransform3DMakeScale(1.3, 1.3, 1.3)
-    let scaleBack = CATransform3DMakeScale(1, 1, 1)
 }

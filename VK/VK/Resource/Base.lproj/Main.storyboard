@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3354" y="583"/>
+            <point key="canvasLocation" x="3353.6231884057975" y="582.58928571428567"/>
         </scene>
         <!--My Friends-->
         <scene sceneID="MGr-m2-uOH">
@@ -403,6 +403,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oUI-ff-LIR" kind="unwind" unwindAction="addSelectedGroupWithSegue:" id="Dlx-Mc-Dda"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
