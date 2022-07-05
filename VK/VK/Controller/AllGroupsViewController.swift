@@ -44,7 +44,7 @@ class AllGroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "AllGroupsXib")
+        tableView.register(UINib(nibName: GroupXibCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: GroupXibCell.reuseIdentifier)
         
         filteredGroups = allGroups
     }
@@ -60,7 +60,7 @@ extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsXibCell", for: indexPath) as? GroupXibCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupXibCell", for: indexPath) as? GroupXibCell else {
             
             preconditionFailure("Error")
         }
@@ -69,10 +69,6 @@ extension AllGroupsViewController: UITableViewDataSource {
         cell.groupName.text = filteredGroups[indexPath.row].name
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
     }
 }
 

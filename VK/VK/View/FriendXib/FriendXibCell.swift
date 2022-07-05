@@ -9,6 +9,8 @@ import UIKit
 
 class FriendXibCell: UITableViewCell {
     
+    static let reuseIdentifier = "FriendXibCell"
+    
     // MARK: - Outlets
 
     @IBOutlet weak var friendPhoto: UIImageView!

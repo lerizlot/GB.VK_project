@@ -9,6 +9,8 @@ import UIKit
 
 class PhotoXibCell: UICollectionViewCell {
     
+    static let reuseIdentifier = "PhotoXibCell"
+    
     // MARK: - Outlets
 
     @IBOutlet weak var friendPhoto: UIImageView!
