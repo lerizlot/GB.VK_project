@@ -388,23 +388,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xcz-sn-jnE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="691"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="MeA-Ff-xEd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AllGroupsXibCell" id="UWF-bc-pPa" customClass="GroupXibCell" customModule="VK" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="95.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UWF-bc-pPa" id="NlB-vh-Q8m">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oUI-ff-LIR" kind="unwind" unwindAction="addSelectedGroupWithSegue:" id="Dlx-Mc-Dda"/>
+                                            <segue destination="oUI-ff-LIR" kind="unwind" identifier="addGroup" unwindAction="addSelectedGroupWithSegue:" id="Dlx-Mc-Dda"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -414,12 +409,21 @@
                                     <outlet property="delegate" destination="5kQ-8u-bFh" id="9vI-WW-Ooj"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" background="     " clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6r2-Af-nzh">
+                                <rect key="frame" x="20" y="88" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.86387190560000005" green="0.86387190560000005" blue="0.86387190560000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" returnKeyType="search"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1nZ-Ki-2cv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6r2-Af-nzh" firstAttribute="top" secondItem="1nZ-Ki-2cv" secondAttribute="top" id="1e0-3C-cHx"/>
+                            <constraint firstItem="Xcz-sn-jnE" firstAttribute="top" secondItem="6r2-Af-nzh" secondAttribute="bottom" id="BEQ-Rf-7qR"/>
+                            <constraint firstItem="1nZ-Ki-2cv" firstAttribute="trailing" secondItem="6r2-Af-nzh" secondAttribute="trailing" constant="20" id="HVV-b5-sVM"/>
+                            <constraint firstItem="6r2-Af-nzh" firstAttribute="leading" secondItem="1nZ-Ki-2cv" secondAttribute="leading" constant="20" id="K7P-SA-T4o"/>
                             <constraint firstItem="1nZ-Ki-2cv" firstAttribute="trailing" secondItem="Xcz-sn-jnE" secondAttribute="trailing" id="gHC-PL-sAm"/>
-                            <constraint firstItem="Xcz-sn-jnE" firstAttribute="top" secondItem="1nZ-Ki-2cv" secondAttribute="top" id="goj-pC-0JZ"/>
                             <constraint firstItem="1nZ-Ki-2cv" firstAttribute="bottom" secondItem="Xcz-sn-jnE" secondAttribute="bottom" id="ka8-dg-h9R"/>
                             <constraint firstItem="Xcz-sn-jnE" firstAttribute="leading" secondItem="1nZ-Ki-2cv" secondAttribute="leading" id="ml8-Bv-RIE"/>
                         </constraints>
@@ -432,7 +436,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchBarGroup" destination="MeA-Ff-xEd" id="QlS-4b-yY9"/>
+                        <outlet property="customSearchBar" destination="6r2-Af-nzh" id="2EU-Eq-7Lh"/>
                         <outlet property="tableView" destination="Xcz-sn-jnE" id="l6v-5F-NPB"/>
                     </connections>
                 </viewController>
@@ -569,6 +573,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="     " width="128" height="128"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="logo" width="1024" height="1024"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

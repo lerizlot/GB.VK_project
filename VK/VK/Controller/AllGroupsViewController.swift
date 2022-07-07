@@ -17,6 +17,8 @@ class AllGroupsViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var customSearchBar: UITextField!
+    
     // MARK: - GroupStorage
     
     let allGroups = [
@@ -34,8 +36,8 @@ class AllGroupsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            self.tableView.dataSource = self
-            self.tableView.delegate = self
+            tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     
@@ -75,7 +77,8 @@ extension AllGroupsViewController: UITableViewDataSource {
 extension AllGroupsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+
+        performSegue(withIdentifier: "addGroup", sender: nil)
     }
 }
 
