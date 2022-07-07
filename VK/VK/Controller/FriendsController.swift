@@ -118,14 +118,19 @@ extension FriendsController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // добавить массив друзей и после этого настроить эту часть кода
         if segue.identifier == "showPhoto",
-           let destinationVC = segue.destination as? PhotoViewController,
-           let indexPath = tableView.indexPathForSelectedRow {
-            // передаем на контроллер ад
-            destinationVC.photoAlbum = friends[indexPath.row].album
-            let friendName = friends[indexPath.row].name
-            
-            destinationVC.title = friendName
-        }
+        let destinationVC = segue.destination as? PhotoViewController,
+            let indexPath = tableView.indexPathForSelectedRow {
+                let firstChar = sortedFriends.keys.sorted()[indexPath.section]
+                let friends = sortedFriends[firstChar]!
+                let friend: User = friends[indexPath.row]
+                
+                // передаем на контроллер
+                destinationVC.photoAlbum = friend.album
+                let friendName = friend.name
+                destinationVC.title = friendName
+            }
+        
+        
     }
     
 }
