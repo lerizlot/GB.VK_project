@@ -9,7 +9,10 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    var photoAlbum: [UIImage] = []    
+    var selectedPhoto: Int = 0
+    var photoAlbum: [UIImage] = []
+    var friend: User?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -52,7 +55,9 @@ extension PhotoViewController: UICollectionViewDataSource {
 extension PhotoViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Нажат элемент \(indexPath.row)")
+       // performSegue(withIdentifier: "showScaledPhoto", sender: nil)
     }
+    
+    
     
 }
