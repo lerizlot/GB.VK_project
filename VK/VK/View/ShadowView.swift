@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ShadowView: UIView {
+@IBDesignable class ShadowView: UIView {
     
     var shadowRadius: CGFloat = 25 {
         didSet {
@@ -19,12 +19,13 @@ class ShadowView: UIView {
     var shadowOpacity: Float = 0.7
     var color = UIColor.black.cgColor
     
+    // подготавливает получатель после его загрузки из Interface Builder или файла xib
     override func awakeFromNib() {
         super.awakeFromNib()
         
         setupShadowView()
     }
-    
+    // тут происходит вычисление размера и расположения ui-компонентов
     override func layoutSubviews() {
         super.layoutSubviews()
         

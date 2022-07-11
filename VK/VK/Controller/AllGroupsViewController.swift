@@ -17,6 +17,8 @@ class AllGroupsViewController: UIViewController {
         }
     }
     
+    //@IBOutlet weak var customSearchBar: UITextField!
+    
     // MARK: - GroupStorage
     
     let allGroups = [
@@ -34,8 +36,8 @@ class AllGroupsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            self.tableView.dataSource = self
-            self.tableView.delegate = self
+            tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     
@@ -44,7 +46,7 @@ class AllGroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "AllGroupsXib")
+        tableView.register(UINib(nibName: GroupXibCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: GroupXibCell.reuseIdentifier)
         
         filteredGroups = allGroups
     }
@@ -60,7 +62,7 @@ extension AllGroupsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsXibCell", for: indexPath) as? GroupXibCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupXibCell", for: indexPath) as? GroupXibCell else {
             
             preconditionFailure("Error")
         }
@@ -70,16 +72,13 @@ extension AllGroupsViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
-    }
 }
 
 extension AllGroupsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+
+        performSegue(withIdentifier: "addGroup", sender: nil)
     }
 }
 

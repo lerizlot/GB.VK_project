@@ -14,7 +14,7 @@ class MyGroupsTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "GroupXib")
+        tableView.register(UINib(nibName: GroupXibCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: GroupXibCell.reuseIdentifier)
     }
     
     
@@ -30,7 +30,7 @@ class MyGroupsTableController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupXib",
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GroupXibCell.reuseIdentifier,
                                                        for: indexPath) as? GroupXibCell else {
             preconditionFailure("Error")
         }

@@ -9,8 +9,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    var photoAlbum: [UIImage] = []
-    
+    var photoAlbum: [UIImage] = []    
     // MARK: - Outlets
     
     @IBOutlet weak var collectionView: UICollectionView! {
