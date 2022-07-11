@@ -22,17 +22,30 @@ class PhotoCell: UICollectionViewCell {
         container.addGestureRecognizer(tap)
     }
     
+    func animateLike() {
+        UIView.transition(with: likeControl.likePicture,
+                          duration: 0.3,
+                          options: .transitionFlipFromTop, animations: nil)
+    }
+    func animateLabel() {
+        UIView.transition(with: likeControl.likeQuantity,
+                          duration: 0.3,
+                          options: .transitionFlipFromTop, animations: nil)
+    }
+    
     @objc func handleTap(_: UITapGestureRecognizer) {
         likeControl.isLiked.toggle()
         
         if likeControl.isLiked {
             likeControl.likePicture.image = (UIImage(systemName: "arrow.up.heart.fill"))
             likeControl.likeQuantity.text = "1"
-            likeControl.likePicture.transform3D = scale
+            animateLike()
+            animateLabel()
         } else {
             likeControl.likePicture.image = (UIImage(systemName: "arrow.down.heart"))
             likeControl.likeQuantity.text = "0"
-            likeControl.likePicture.transform3D = scaleBack
+            animateLike()
+            animateLabel()
         }
     }
     

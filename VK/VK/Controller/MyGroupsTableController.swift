@@ -14,12 +14,9 @@ class MyGroupsTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = true
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableView.register(UINib(nibName: "GroupXibCell", bundle: nil), forCellReuseIdentifier: "GroupXib")
     }
+    
     
     // MARK: - Table view data source
     
@@ -29,22 +26,17 @@ class MyGroupsTableController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return groups.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell",
-                                                       for: indexPath) as? GroupCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupXib",
+                                                       for: indexPath) as? GroupXibCell else {
             preconditionFailure("Error")
         }
 
         cell.groupName.text = groups[indexPath.row].name
         cell.groupImage.image = groups[indexPath.row].image
-        
-//        print(indexPath.row)
-//        print(indexPath.section)
         
         return cell
     }
@@ -77,6 +69,8 @@ class MyGroupsTableController: UITableViewController {
             }
         }
     }
+    
+    // MARK: - Header
     
     /*
      // Override to support conditional editing of the table view.
