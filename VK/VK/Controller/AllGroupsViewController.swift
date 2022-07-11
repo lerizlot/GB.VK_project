@@ -17,7 +17,7 @@ class AllGroupsViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var customSearchBar: UITextField!
+    //@IBOutlet weak var customSearchBar: UITextField!
     
     // MARK: - GroupStorage
     
