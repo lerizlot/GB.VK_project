@@ -319,30 +319,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDw-mr-F9a">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4cE-ZQ-3yL">
                                 <rect key="frame" x="20" y="261" width="374" height="374"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4cE-ZQ-3yL">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="8rL-EP-RLJ"/>
-                                    <constraint firstAttribute="height" constant="374" id="cpS-2h-y4t"/>
-                                    <constraint firstItem="4cE-ZQ-3yL" firstAttribute="top" secondItem="zDw-mr-F9a" secondAttribute="top" id="jO9-mY-xP8"/>
-                                    <constraint firstItem="4cE-ZQ-3yL" firstAttribute="leading" secondItem="zDw-mr-F9a" secondAttribute="leading" id="jhE-cO-Dgq"/>
-                                    <constraint firstAttribute="trailing" secondItem="4cE-ZQ-3yL" secondAttribute="trailing" id="vx7-FA-hBs"/>
-                                    <constraint firstAttribute="bottom" secondItem="4cE-ZQ-3yL" secondAttribute="bottom" id="xcd-LR-vIP"/>
-                                </constraints>
-                            </view>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WgF-TQ-pFp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="zDw-mr-F9a" firstAttribute="centerY" secondItem="HRz-Ti-mMI" secondAttribute="centerY" id="Wq3-dL-hi3"/>
-                            <constraint firstItem="zDw-mr-F9a" firstAttribute="centerX" secondItem="HRz-Ti-mMI" secondAttribute="centerX" id="uwj-TS-tZJ"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="sNk-E0-sDV"/>
                     <connections>

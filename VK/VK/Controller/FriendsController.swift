@@ -118,8 +118,6 @@ extension FriendsController: UITableViewDelegate {
                 let friendName = friend.name
                 destinationVC.title = friendName
             }
-        
-        
     }
     
 }

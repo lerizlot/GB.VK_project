@@ -11,7 +11,6 @@ class PhotoViewController: UIViewController {
     
     var selectedPhoto: Int = 0
     var photoAlbum: [UIImage] = []
-    var friend: User?
     
     // MARK: - Outlets
     
@@ -58,6 +57,13 @@ extension PhotoViewController: UICollectionViewDelegate {
        // performSegue(withIdentifier: "showScaledPhoto", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let allPhotoVC = segue.destination as? FullScreenPhotoController
+        let selectedCollectionItem = collectionView.indexPathsForSelectedItems!.first
+
+        allPhotoVC?.photo = photoAlbum
+        allPhotoVC?.selectedPhoto = selectedCollectionItem!.item
+    }
     
     
 }
