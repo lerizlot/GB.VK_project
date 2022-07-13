@@ -20,10 +20,4 @@ class User {
         self.album = album
         
     }
-    
-    //сравниваем левое значение с правым значением
-    static func == (lhs: User, rhs: User) -> Bool {
-        lhs.name == rhs.name
-    }
-    
 }

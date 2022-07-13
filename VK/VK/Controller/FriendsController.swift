@@ -94,17 +94,6 @@ extension FriendsController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor.lightGray
     }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        return
-//    }
-//
-//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        return "Footer \(section)"
-//    }
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        return
-//    }
 }
 
 extension FriendsController: UITableViewDelegate {
@@ -129,8 +118,6 @@ extension FriendsController: UITableViewDelegate {
                 let friendName = friend.name
                 destinationVC.title = friendName
             }
-        
-        
     }
     
 }

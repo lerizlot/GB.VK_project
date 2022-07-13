@@ -9,7 +9,9 @@ import UIKit
 
 class PhotoViewController: UIViewController {
     
-    var photoAlbum: [UIImage] = []    
+    var selectedPhoto: Int = 0
+    var photoAlbum: [UIImage] = []
+    
     // MARK: - Outlets
     
     @IBOutlet weak var collectionView: UICollectionView! {
@@ -52,7 +54,16 @@ extension PhotoViewController: UICollectionViewDataSource {
 extension PhotoViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Нажат элемент \(indexPath.row)")
+       // performSegue(withIdentifier: "showScaledPhoto", sender: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let allPhotoVC = segue.destination as? FullScreenPhotoController
+        let selectedCollectionItem = collectionView.indexPathsForSelectedItems!.first
+
+        allPhotoVC?.photo = photoAlbum
+        allPhotoVC?.selectedPhoto = selectedCollectionItem!.item
+    }
+    
     
 }
